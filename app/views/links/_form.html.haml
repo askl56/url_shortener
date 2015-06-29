@@ -1,0 +1,25 @@
+= form_for @link do |f|
+  - if @link.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@link.errors.count, "error")} prohibited this link from being saved:"
+      %ul
+        - @link.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label :slug
+    = f.text_field :slug
+  .field
+    = f.label :clicks
+    = f.number_field :clicks
+  .field
+    = f.label :snapshot
+    = f.text_field :snapshot
+  .field
+    = f.label :title
+    = f.text_field :title
+  .actions
+    = f.submit 'Save'
