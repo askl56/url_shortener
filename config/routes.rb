@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   get ':slug' => 'links#show'
 
-  root 'home#index'
+  root 'links#index'
 end
