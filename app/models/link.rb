@@ -4,4 +4,8 @@ class Link < ActiveRecord::Base
     self.slug = self.id.to_s(36)
     self.save
   end
+
+  def display_slug
+    ENV['STOCK_URL'] + self.slug
+  end
 end
