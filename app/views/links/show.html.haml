@@ -5,16 +5,7 @@
   = @link.url
 %p
   %b Slug:
-  = @link.slug
-%p
-  %b Clicks:
-  = @link.clicks
-%p
-  %b Snapshot:
-  = @link.snapshot
-%p
-  %b Title:
-  = @link.title
+  = @link.display_slug
 
 = link_to 'Edit', edit_link_path(@link)
 \|
